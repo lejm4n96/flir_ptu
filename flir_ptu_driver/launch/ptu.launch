@@ -11,7 +11,7 @@
        joint_state_publisher subscribe to the ptu state. -->
   <group if="$(arg stand_alone)">
     <param name="robot_description" textfile="$(find flir_ptu_description)/urdf/example.urdf" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>
 
   <node name="ptu_driver" pkg="flir_ptu_driver" type="ptu_node" ns="ptu" output="screen">
